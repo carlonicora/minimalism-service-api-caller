@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  minimalism-service-api-caller:
+    container_name: minimalism-service-api-caller
+    image: carlonicora/minimalism-service-api-caller:1.0
+    build:
+      context: .
+      dockerfile: ./php-cli/Dockerfile
+      args:
+        - XDEBUG_HOST=${XDEBUG_HOST}
+        - XDEBUG_PORT=${XDEBUG_PORT}
+    working_dir: /app
+    volumes:
+      - ../:/app
+    tty: true
+    stdin_open: true
+    networks:
+      - default_network
+
+networks:
+  default_network:
+    driver: bridge
+    name: carlonicora

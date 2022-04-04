@@ -1,0 +1,30 @@
+{
+  "name": "carlonicora/minimalism-service-api-caller",
+  "description": "{json:api} API Caller",
+  "version": "1.0.0",
+  "homepage": "https://carlonicora.com",
+  "time": "2022-04-04",
+  "license": "MIT",
+  "type": "library",
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "Carlo Nicora",
+      "email": "carlo@carlonicora.com",
+      "homepage": "https://carlonicora.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "CarloNicora\\Minimalism\\ApiCaller\\":"src/"
+    }
+  },
+  "require": {
+    "php": ">=8.1",
+    "ext-json": "*",
+    "ext-curl": "*",
+    "carlonicora/jsonapi": "~3.0",
+    "carlonicora/minimalism": "~13.0"
+  }
+}
