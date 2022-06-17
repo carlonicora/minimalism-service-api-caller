@@ -21,6 +21,10 @@ class ApiCaller extends AbstractService
         ?string $hostName=null,
     ): ApiResponse
     {
+        if (!str_ends_with(haystack: $serverUrl, needle: '/')){
+            $serverUrl .= '/';
+        }
+
         $curl = curl_init();
 
         $options = $request->getCurlOpts(
