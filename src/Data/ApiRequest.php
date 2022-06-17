@@ -29,6 +29,9 @@ class ApiRequest
         public array $requestHeader = []
     )
     {
+        if (str_starts_with(haystack: $this->endpoint, needle: '/')){
+            $this->endpoint = substr($this->endpoint, 1);
+        }
     }
 
     /**

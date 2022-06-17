@@ -1,7 +1,7 @@
 {
   "name": "carlonicora/minimalism-service-api-caller",
   "description": "{json:api} API Caller",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://carlonicora.com",
   "time": "2022-04-04",
   "license": "MIT",
